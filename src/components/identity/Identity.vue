@@ -12,7 +12,7 @@ const props = withDefaults(defineProps<propsInterface>(), {
     <div class="identity-body">
         <div class="identity-headline">
           <h1 class="text-align-center m-0-bottom">{{ props.label }}</h1>
-          <p>The future is still under construction</p>
+          <p class="text-align-center">The future is still under construction</p>
         </div>
     </div>
 </template>
