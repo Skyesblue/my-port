@@ -1,0 +1,80 @@
+@import 'color.scss';
+
+// text align
+@each $value in left, right, center, justify {
+    .text-align-#{$value} {
+        text-align: #{$value};
+    }
+}
+
+// text decoration 
+@mixin textDecoration($line, $style: solid, $width: 1px, $color: 'black', $colorType: 'base') {
+    text-decoration: $line $style $width map-get($colors, $color, $colorType);
+}
+
+.text-dcr-underline {
+    @include textDecoration(underline);
+}
+
+.text-dcr-line-through {
+    @include textDecoration(line-through);
+}
+
+.text-dcr-overline {
+    @include textDecoration(overline);
+}
+
+// text transform
+@each $value in capitalize, uppercase, lowercase {
+    .text-#{$value} {
+        text-transform: #{$value};
+    }
+}
+
+// text shadow
+@mixin textShadow($horizontal, $vertical: 0, $blur: 0, $color: 'black', $colorType: 'base') {
+    text-shadow: #{$horizontal} #{$vertical} #{$blur} map-get($colors, $color, $colorType);
+}
+
+.text-shadow-1 {
+    @include textShadow(1px);
+}
+
+.text-shadow-1-1 {
+    @include textShadow(1px, 1px);
+}
+
+// text overflow
+@each $value in clip, ellipsis {
+    .text-overflow-#{$value} {
+        text-overflow: #{$value};
+    }
+}
+
+// white space
+@each $value in normal, nowrap, pre, pre-wrap, pre-line {
+    .white-space-#{$value} {
+        white-space: #{$value};
+    }
+}
+
+// word break
+@each $value in normal, break-all, keep-all {
+    .word-break-#{$value} {
+        word-break: #{$value};
+    }
+}
+
+// word wrap
+@each $value in normal, break-word {
+    .word-wrap-#{$value} {
+        word-wrap: #{$value};
+    }
+}
+
+// word spacing
+@for $i from 1 through 10 {
+    .word-spacing-#{$i} {
+        word-spacing: $i + px;
+    }
+}

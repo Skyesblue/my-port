@@ -1,0 +1,181 @@
+$displayValues: flex, inline-flex, inline, block, inline-block, table,
+    table-cell, table-row, table-row-group, table-column, table-column-group,
+    table-header-group, table-footer-group, grid, inline-grid, subgrid, run-in,
+    flow, flow-root, list-item, none;
+
+@each $displayValue in $displayValues {
+    .d-#{$displayValue} {
+        display: #{$displayValue};
+    }
+}
+
+// justify items
+@each $value in flex-start, flex-end, center, baseline, stretch {
+    .justify-items-#{$value} {
+        justify-items: #{$value};
+    }
+}
+
+// justify self
+@each $value in flex-start, flex-end, center, baseline, stretch {
+    .justify-self-#{$value} {
+        justify-self: #{$value};
+    }
+}
+
+// justify content
+@each $value in flex-start, flex-end, center, baseline, stretch, space-between,
+space-around, space-evenly, start, end, left, right {
+    .justify-content-#{$value} {
+        justify-content: #{$value};
+    }
+}
+
+// align items
+@each $value in flex-start, flex-end, center, baseline, stretch {
+    .align-items-#{$value} {
+        align-items: #{$value};
+    }
+}
+
+// align self
+@each $value in flex-start, flex-end, center, baseline, stretch {
+    .align-self-#{$value} {
+        align-self: #{$value};
+    }
+}
+
+// align content
+@each $value in flex-start, flex-end, center, baseline, stretch {
+    .align-content-#{$value} {
+        align-content: #{$value};
+    }
+}
+
+// flex direction
+@each $value in row, row-reverse, column, column-reverse {
+    .flex-direction-#{$value} {
+        flex-direction: #{$value};
+    }
+}
+
+// flex wrap
+@each $value in nowrap, wrap, wrap-reverse {
+    .flex-wrap-#{$value} {
+        flex-wrap: #{$value};
+    }
+}
+
+// flex flow
+// @each $value in row nowrap, row wrap, row wrap-reverse, column, column nowrap,
+//   column wrap, column wrap-reverse
+// {
+//   .flex-flow-#{$value} {
+//     flex-flow: #{$value};
+//   }
+// }
+
+// order
+@for $i from 1 through 12 {
+    .order-#{$i} {
+        order: $i;
+    }
+}
+
+// flex
+@for $i from 1 through 12 {
+    .flex-#{$i} {
+        flex: $i;
+    }
+}
+
+// flex basis
+@for $i from 1 through 12 {
+    .flex-basis-#{$i} {
+        flex-basis: $i;
+    }
+}
+
+// flex grow
+@for $i from 1 through 12 {
+    .flex-grow-#{$i} {
+        flex-grow: $i;
+    }
+}
+
+// flex shrink
+@for $i from 1 through 12 {
+    .flex-shrink-#{$i} {
+        flex-shrink: $i;
+    }
+}
+
+// gap
+@for $i from 1 through 100 {
+    .gap-#{$i} {
+        gap: $i + px;
+    }
+}
+
+// column count
+@for $i from 1 through 12 {
+    .column-count-#{$i} {
+        column-count: $i;
+    }
+}
+
+// column width
+@for $i from 1 through 1000 {
+    .column-width-#{$i} {
+        column-width: $i + px;
+    }
+}
+
+// column gap
+@for $i from 1 through 100 {
+    .column-gap-#{$i} {
+        column-gap: $i + px;
+    }
+}
+
+// column fill
+@each $value in auto, balance, initial, inherit {
+    .column-fill-#{$value} {
+        column-fill: #{$value};
+    }
+}
+
+// column span
+@each $value in all, none, initial, inherit {
+    .column-span-#{$value} {
+        column-span: #{$value};
+    }
+}
+
+// grid auto columns
+@for $i from 1 through 1000 {
+    .grid-auto-columns-#{$i} {
+        grid-auto-columns: $i + px;
+    }
+}
+
+// grid auto flow
+@each $value in row, column, dense, row dense, column dense {
+    .grid-auto-flow-#{$value} {
+        grid-auto-flow: #{$value};
+    }
+}
+
+// grid auto rows
+@for $i from 1 through 1000 {
+    .grid-auto-rows-#{$i} {
+        grid-auto-rows: $i + px;
+    }
+}
+
+// fullCenter flex
+.fullCenter-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,38 @@
+// Poppins
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+// Inter
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+@mixin fontSize($value, $type) {
+    font-size: #{$value}+#{$type};
+}
+
+// font-size
+.fz-px-12 {
+    @include fontSize(12, px);
+}
+
+.fz-px-14 {
+    @include fontSize(14, px);
+}
+
+.fz-px-16 {
+    @include fontSize(16, px);
+}
+
+.fz-px-20 {
+    @include fontSize(20, px);
+}
+
+.fz-px-50 {
+    @include fontSize(50, px);
+}
+
+.fz-em-1 {
+    @include fontSize(1, em);
+}
+
+.fz-em-08 {
+    @include fontSize(0.8, em);
+}

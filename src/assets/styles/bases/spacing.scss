@@ -1,0 +1,123 @@
+// margin & padding
+@for $i from 0 through 300 {
+    .m-#{$i} {
+        margin: $i + px !important;
+    }
+
+    .m-#{$i}-left {
+        margin-left: $i + px !important;
+    }
+
+    .m-#{$i}-right {
+        margin-right: $i + px !important;
+    }
+
+    .m-#{$i}-top {
+        margin-top: $i + px !important;
+    }
+
+    .m-#{$i}-bottom {
+        margin-bottom: $i + px !important;
+    }
+
+    .m-#{$i}-start {
+        margin-inline-start: $i + px !important;
+    }
+
+    .m-#{$i}-end {
+        margin-inline-end: $i + px !important;
+    }
+
+    .m-#{$i}-x {
+        margin-inline: $i + px !important;
+    }
+
+    .m-#{$i}-y {
+        margin-block: $i + px !important;
+    }
+
+    .p-#{$i} {
+        padding: $i + px !important;
+    }
+
+    .p-#{$i}-left {
+        padding-left: $i + px !important;
+    }
+
+    .p-#{$i}-right {
+        padding-right: $i + px !important;
+    }
+
+    .p-#{$i}-top {
+        padding-top: $i + px !important;
+    }
+
+    .p-#{$i}-bottom {
+        padding-bottom: $i + px !important;
+    }
+
+    .p-#{$i}-start {
+        padding-inline-start: $i + px !important;
+    }
+
+    .p-#{$i}-end {
+        padding-inline-end: $i + px !important;
+    }
+
+    .p-#{$i}-x {
+        padding-inline: $i + px !important;
+    }
+
+    .p-#{$i}-y {
+        padding-block: $i + px !important;
+    }
+}
+
+// margin & padding custom
+@mixin marginCustom($top, $right, $bottom, $left) {
+    margin: $top $right $bottom $left;
+}
+
+.m-1-1-1-1-px {
+    @include marginCustom(1px, 1px, 1px, 1px);
+}
+
+@mixin paddingCustom($top, $right, $bottom, $left) {
+    padding: $top $right $bottom $left;
+}
+
+.p-1-1-1-1-px {
+    @include paddingCustom(1px, 1px, 1px, 1px);
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.m-auto-x {
+    margin-inline: auto;
+}
+
+.m-auto-y {
+    margin-block: auto;
+}
+
+.m-auto-left {
+    margin-left: auto;
+}
+
+.m-auto-right {
+    margin-right: auto;
+}
+
+.p-auto {
+    padding: auto;
+}
+
+.p-auto-x {
+    padding-inline: auto;
+}
+
+.p-auto-y {
+    padding-block: auto;
+}
