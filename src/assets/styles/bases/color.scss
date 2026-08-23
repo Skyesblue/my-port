@@ -1,0 +1,167 @@
+$colors: (
+    primary: (base: #007bff,
+        light: #6cb2eb,
+        lighter: #bccee6,
+        dark: #0056b3,
+        darker: #003a75,
+    ),
+    secondary: (base: #6c757d,
+        light: #b3b6bb,
+        lighter: #d7dadb,
+        dark: #495057,
+        darker: #343a40,
+    ),
+    accent: (base: #1a1a1a,
+        light: #999999,
+        lighter: #e5e5e5,
+        dark: #000000,
+        darker: #333333,
+    ),
+    accent1: (base: #16a34a,
+        light: #78d9b6,
+        lighter: #b7f1d9,
+        dark: #0b7734,
+        darker: #05592a,
+    ),
+    accent2: (base: #2948ff,
+        light: #9fb6ff,
+        lighter: #d9d9ff,
+        dark: #1a26c8,
+        darker: #0b1580,
+    ),
+    accent3: (base: #ff8b02,
+        light: #ffe2b2,
+        lighter: #fff5e6,
+        dark: #c75f00,
+        darker: #8e4400,
+    ),
+    accent4: (base: #333745,
+        light: #666d85,
+        lighter: #a0aec0,
+        dark: #1f232d,
+        darker: #0f1319,
+    ),
+    accent5: (base: #6366f1,
+        light: #969af6,
+        lighter: #c9ccef,
+        dark: #3f42c7,
+        darker: #262994,
+    ),
+    accent6: (base: #f0f4c3,
+        light: #f9fbe7,
+        lighter: #fafcf5,
+        dark: #c1c76c,
+        darker: #8b9444,
+    ),
+    danger: (base: #dc3545,
+        light: #f8a0a0,
+        lighter: #fde0e0,
+        dark: #99232e,
+        darker: #661319,
+    ),
+    success: (base: #28a745,
+        light: #8af0e1,
+        lighter: #e1fffb,
+        dark: #1e7e34,
+        darker: #155a2b,
+    ),
+    info: (base: #17a2b8,
+        light: #90caf9,
+        lighter: #e9f7fc,
+        dark: #10708a,
+        darker: #0b4a61,
+    ),
+    warning: (base: #ffc107,
+        light: #fdf4da,
+        lighter: #fff9e6,
+        dark: #c6a700,
+        darker: #826f00,
+    ),
+    white: (base: #fff,
+    ),
+    black: (base: #000,
+        10%: rgba(0, 0, 0, 0.1),
+        20%: rgba(0, 0, 0, 0.2),
+        30%: rgba(0, 0, 0, 0.3),
+        40%: rgba(0, 0, 0, 0.4),
+        50%: rgba(0, 0, 0, 0.5),
+        60%: rgba(0, 0, 0, 0.6),
+        70%: rgba(0, 0, 0, 0.7),
+        80%: rgba(0, 0, 0, 0.8),
+        90%: rgba(0, 0, 0, 0.9),
+    ),
+);
+
+@mixin color($name, $type: 'base') {
+    color: map-get($colors, $name, $type);
+}
+
+@mixin bgColor($name, $type: 'base') {
+    background-color: map-get($colors, $name, $type);
+}
+
+// color
+$colorList: primary, secondary, accent, accent1, accent2, accent3, accent4,
+    accent5, accent6, danger, success, info, warning, 'white', 'black';
+
+@each $value in $colorList {
+    .color-#{$value} {
+        @include color($value);
+    }
+}
+
+// .color-primary {
+//   @include color(primary);
+// }
+.color-secondary-lighter {
+    @include color(secondary, lighter);
+}
+
+.color-white {
+    @include color(white);
+}
+
+// bg
+.bg-primary {
+    @include bgColor(primary);
+}
+
+.bg-secondary-dark {
+    @include bgColor(secondary, dark);
+}
+
+.bg-secondary-darker {
+    @include bgColor(secondary, darker);
+}
+
+.bg-accent-lighter {
+    @include bgColor(accent, lighter);
+}
+
+.bg-white {
+    @include bgColor(white);
+}
+
+.bg-black {
+    @include bgColor(black);
+}
+
+.bg-danger {
+    @include bgColor(danger);
+}
+
+.bg-danger-light {
+    @include bgColor(danger, light);
+}
+
+.bg-40-black {
+    @include bgColor(black, 40%);
+}
+
+.bg-success {
+    @include bgColor(success);
+}
+
+.bg-secondary-lighter {
+    @include bgColor(secondary, lighter);
+}

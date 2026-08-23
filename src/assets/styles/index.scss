@@ -1,0 +1,16 @@
+@import './bases/index.scss';
+@import './pages/index.scss';
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+
+    p {
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
