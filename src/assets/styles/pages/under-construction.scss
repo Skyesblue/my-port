@@ -1,0 +1,30 @@
+.construction-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../images/identity-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+
+    .construction-headline {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-inline: 150px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 200%;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+        .construction-headline {
+            font-size: 100%;
+            margin-inline: 50px;
+        }
+    }
+}
