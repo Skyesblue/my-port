@@ -44,7 +44,6 @@ $mobile-breakpoint: 768px;
 // ========================================
 
 .navbar {
-
     position: fixed;
 
     top: 0;
@@ -69,7 +68,7 @@ $mobile-breakpoint: 768px;
 
         display: flex;
 
-        align-items: center;
+        align-items: start;
 
         width: 100%;
         max-width: $navbar-max-width;
@@ -104,12 +103,13 @@ $mobile-breakpoint: 768px;
 
         text-decoration: none;
 
-        margin-right: auto;
+        margin: 0px auto auto auto;
 
         transition: opacity $transition-fast;
 
         &:hover {
-            opacity: 0.7;
+            // opacity: 0.7;
+            font-weight: 1000;
         }
     }
 
@@ -121,10 +121,11 @@ $mobile-breakpoint: 768px;
     &__links {
 
         display: flex;
+        flex-direction: column;
 
-        align-items: center;
+        align-items: left;
 
-        gap: 32px;
+        gap: 5px;
 
         margin-right: 32px;
 
@@ -146,33 +147,34 @@ $mobile-breakpoint: 768px;
 
 
             &:hover {
-                opacity: 0.65;
+                // opacity: 0.65;
+                font-weight: 1000;
             }
 
 
             // Optional underline animation
 
-            &::after {
+            // &::after {
 
-                content: '';
+            //     content: '';
 
-                position: absolute;
+            //     position: absolute;
 
-                left: 0;
-                bottom: -5px;
+            //     left: 0;
+            //     bottom: -5px;
 
-                width: 100%;
-                height: 1px;
+            //     width: 100%;
+            //     height: 1px;
 
-                background: white;
+            //     background: white;
 
-                transform: scaleX(0);
+            //     transform: scaleX(0);
 
-                transform-origin: right;
+            //     transform-origin: right;
 
-                transition:
-                    transform $transition-fast;
-            }
+            //     transition:
+            //         transform $transition-fast;
+            // }
 
 
             &:hover::after {

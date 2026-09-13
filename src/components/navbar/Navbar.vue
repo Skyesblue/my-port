@@ -29,12 +29,6 @@ onUnmounted(() => {
             class="navbar"
         >
             <div class="navbar__inner">
-
-                <!-- Logo -->
-                <a href="/" class="navbar__logo">
-                    Rachellia Ayu Herdani
-                </a>
-
                 <!-- Desktop navigation -->
                 <nav class="navbar__links">
                     <a href="#products">Products</a>
@@ -42,6 +36,14 @@ onUnmounted(() => {
                     <a href="#experts">Experts</a>
                     <a href="#contact">Contact</a>
                 </nav>
+
+                <!-- Logo -->
+                
+                <a href="/" class="navbar__logo">
+                    Rachellia Ayu Herdani
+                </a>
+
+                
 
                 <!-- Desktop button -->
                 <a href="#contact" class="navbar__button">

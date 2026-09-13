@@ -27,6 +27,9 @@
         //     // border-radius: 8px;
         //     // filter: blur(3px)
         // }
+        h1 {
+            text-align: center;
+        }
 
         p {
             font-size: 60%;
@@ -38,6 +41,11 @@
         .identity-headline {
             font-size: 100%;
             margin-inline: 50px;
+
+            p {
+                font-size: 75%;
+                margin-top: 10px;
+            }
         }
     }
 }
