@@ -4,5 +4,5 @@
 
 <template>
     <Navbar />
-    <Autobiography label="Welcome to my little portfolio" />
+    <Autobiography label="Hi, I'm a Software Engineer" />
 </template>

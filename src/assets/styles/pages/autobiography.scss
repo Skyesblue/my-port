@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../images/identity-background.jpg');
+    background-image: url('../../images/identity-background-3.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -11,7 +11,7 @@
 
     .identity-headline {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-inline: 150px;
@@ -20,12 +20,17 @@
         color: white;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 
-        img {
-            width: 20%;
-            padding: 10px;
-            border: 1px solid white;
-            border-radius: 8px;
-            filter: blur(3px)
+        // img {
+        //     width: 20%;
+        //     padding: 10px;
+        //     // border: 1px solid white;
+        //     // border-radius: 8px;
+        //     // filter: blur(3px)
+        // }
+
+        p {
+            font-size: 60%;
+            text-align: center;
         }
     }
 
