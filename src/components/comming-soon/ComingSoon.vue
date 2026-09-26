@@ -9,9 +9,9 @@ const props = withDefaults(defineProps<propsInterface>(), {
 </script>
 
 <template>
-    <div class="works-container">
-        <div class="works-title">
-            <h2>My Works</h2>
+    <div class="coming-container">
+        <div class="coming-title">
+            <h1>Coming Soon</h1>
         </div>
     </div>
 </template>

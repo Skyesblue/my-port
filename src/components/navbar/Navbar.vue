@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const isScrolled: Ref<boolean | null> = ref(null);
-const isMobileMenuOpen: Ref<boolean | null> = ref(false)
+const isScrolled = ref(false)
+const isMobileMenuOpen = ref(false)
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 40
@@ -15,6 +15,7 @@ const closeMobileMenu = () => {
 }
 
 onMounted(() => {
+  handleScroll()
   window.addEventListener('scroll', handleScroll)
 })
 
@@ -27,28 +28,24 @@ onUnmounted(() => {
     <header>
         <nav 
             class="navbar"
+            :class="{ 'navbar--scrolled': isScrolled }"
         >
             <div class="navbar__inner">
-                <!-- Desktop navigation -->
-                <nav class="navbar__links">
+
+                <div class="navbar__links">
                     <a href="#products">Works</a>
                     <a href="#research">Research</a>
-                </nav>
+                </div>
 
-                <!-- Logo -->
-                
                 <a href="/" class="navbar__logo">
-                    Rachellia Ayu Herdani
+                    <div v-if="!isScrolled">Rachellia Ayu Herdani</div>
+                    <div v-else>RH .</div>
                 </a>
 
-                
-
-                <!-- Desktop button -->
                 <a href="#contact" class="navbar__button">
                     Get in touch
                 </a>
 
-                <!-- Mobile hamburger -->
                 <button
                     class="navbar__hamburger"
                     @click="toggleMobileMenu"
