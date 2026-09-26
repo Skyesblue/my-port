@@ -1,0 +1,30 @@
+.works-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #162239;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+
+    .works-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-inline: 150px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 100%;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            font-size: 60%;
+            text-align: center;
+        }
+    }
+}

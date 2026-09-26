@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import Identity from './components/identity/Identity.vue';
-import TheWelcome from './components/TheWelcome.vue'
+import MainLayout from '@/layouts/main-layout/MainLayout.vue';
+
 </script>
 
 <template>
-  <Identity label="Welcome to my little portfolio" />
+  <MainLayout />
+  <!-- <UnderConstruction label="Welcome to my little portfolio" /> -->
 </template>
 
 <style scoped>
