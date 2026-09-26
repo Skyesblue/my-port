@@ -31,10 +31,8 @@ onUnmounted(() => {
             <div class="navbar__inner">
                 <!-- Desktop navigation -->
                 <nav class="navbar__links">
-                    <a href="#products">Products</a>
+                    <a href="#products">Works</a>
                     <a href="#research">Research</a>
-                    <a href="#experts">Experts</a>
-                    <a href="#contact">Contact</a>
                 </nav>
 
                 <!-- Logo -->

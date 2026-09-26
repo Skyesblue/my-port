@@ -24,5 +24,6 @@ declare module 'vue' {
     TheWelcome: typeof import('./components/TheWelcome.vue')['default']
     UnderConstruction: typeof import('./components/under-construction/UnderConstruction.vue')['default']
     WelcomeItem: typeof import('./components/WelcomeItem.vue')['default']
+    Works: typeof import('./components/works/Works.vue')['default']
   }
 }
